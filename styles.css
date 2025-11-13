@@ -1,0 +1,16 @@
+/* Color Palette:
+Light Shades: #F2F2EF;
+Light Accent: #7C7D6F;
+Main Brand Color: #91918D;
+Dark Accent: #7B7377;
+Dark Shades: #212721;
+*/
+
+* {
+	box-sizing: border-box;
+    background-color: #212721;
+}
+
+.name {
+    color: #91918D;
+}
