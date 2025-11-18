@@ -8,28 +8,41 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Elnatan's Personal Website</h1>
+        <h1>Welcome To Elnatan's Website!</h1>
+        <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="interests.html">Interests</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     </header>
-    <section id ="Profile">
-        <h2>about me!</h2>
-        <img src= "1727721549031.jpg" alt="Elnatan's Photo" width="200" height="200">
-        <h3 class = "name">Elnatan Teaghes</h3>
-        <h4>Student Programmer</h4>
+    <!-- Top row: profile picture + name -->
+    <section class="top-row" style="max-width:1100px;margin:18px auto;padding:0 20px;">
+        <img class="profile-pic" src="1727721549031.jpg" alt="Elnatan's Photo">
+        <div class="profile-info">
+            <h1 class="name">Elnatan Teaghes</h1>
+            <h4 class="student-title">Student Programmer</h4>
+        </div>
     </section>
 
-    <div id="bio">
-        <p>Hello! I'm Elnatan, a student at Wake Early College of Information and Biotechnologies & Wake Tech.<br> I am passionate about programming and technology. <br> I love helping others learn and grow in these fields, while I am in the same process.</p>
-    </div>
-        <article id= "skills">
+    <!-- Three-column layout: bio (middle larger), skills (left), projects (right) -->
+    <section id="Profile">
+        <article id="skills">
             <h4>Skills:</h4>
-                <ol>
-                    <li><em>HTML</em></li>
-                    <li><em>CSS</em></li>
-                    <li><em>Python</em></li>
-                </ol>
-            </article>
+            <ol>
+                <li><em>HTML</em></li>
+                <li><em>CSS</em></li>
+                <li><em>Python</em></li>
+            </ol>
+        </article>
 
-        <article id= "projects">
+        <article id="bio">
+            <h2>About Me</h2>
+            <p>Hello! I'm Elnatan, a student at Wake Early College of Information and Biotechnologies & Wake Tech. I am passionate about programming and technology. I love helping others learn and grow in these fields, while I am in the same process.</p>
+        </article>
+
+        <article id="projects">
             <h4>Projects:</h4>
             <ul>
                 <li><strong>Thursday Muffins Bakery Website:</strong> A website for my sister's home bakery business, showcasing her products and services.</li>
@@ -37,12 +50,10 @@
                 <li><strong>HTML/CSS Portfolio:</strong> A personal portfolio website to showcase my projects and skills.</li>
             </ul>
         </article>
-
     </section>
-    
-<a href="interests.html">My Interests</a> |
-<a href="contact.html">Contact Me</a>
-    
-
+    <footer class="footer">
+        <p>Contact: <a href="mailto:eeteaghes@my.waketech.edu">eeteaghes@my.waketech.edu</a></p>
+        <p>&copy; 2025, Elnatan Teaghes</p>
+    </footer> 
 </body>
 </html>
