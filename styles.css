@@ -1,16 +1,155 @@
 /* Color Palette:
-Light Shades: #F2F2EF;
-Light Accent: #7C7D6F;
-Main Brand Color: #91918D;
-Dark Accent: #7B7377;
-Dark Shades: #212721;
+Light Shades: #312F2F;
+Light Accent: #84DCCF;
+Main Brand Color: #A6D9F7;
+Dark Accent: #BCCCE0;
+Dark Shades: #BF98A0;
 */
 
+/* Box model + base */
 * {
-	box-sizing: border-box;
-    background-color: #212721;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #312F2F;
+    color: #BF98A0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.45;
+}
+
+/* Top-row (profile) */
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    max-width: 1100px;
+    margin: 18px auto;
+    background: transparent;
+}
+
+.profile-info { margin-left: 4px; }
+
+/* Page header and profile */
+header {
+    background: linear-gradient(#A6D9F7, #BCCCE0);
+    color: #312F2F;
+    padding: 18px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.profile-pic {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 14px;
+    border: 3px solid #84DCCF;
 }
 
 .name {
-    color: #91918D;
+    display: inline-block;
+    vertical-align: middle;
+    color: #BF98A0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 28px; /* px as requested */
+    margin: 0 0 6px 0;
 }
+
+.student-title {
+    margin: 0;
+    color: #BCCCE0;
+}
+
+/* Navigation */
+.navbar {
+    list-style-type: none;
+    margin: 12px 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 12px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #312F2F;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 160ms ease, color 160ms ease;
+}
+
+.navbar a:hover {
+    background: #84DCCF;
+    color: #312F2F;
+}
+
+/* Main 3-column layout */
+section#Profile {
+    display: flex;
+    gap: 18px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 18px auto;
+}
+
+#bio {
+    flex: 2;
+    background: #84DCCF;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#skills, #projects {
+    flex: 1;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+
+
+#skills ol, #projects ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+section h2, article h4 {
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background: #BCCCE0;
+    color: #312F2F;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+footer a { 
+color: #007acc;
+    text-decoration: none;
+ }
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+    section#Profile { flex-direction: column; padding: 12px; }
+    .profile-pic { width: 100px; height: 100px; }
+    .name { font-size: 22px; }
+}
+
+@media (max-width: 420px) {
+    .navbar { flex-direction: column; gap: 6px; padding-left: 20px; }
+}
+
+/* Accessibility: avoid comic sans, set readable defaults */
+*::-moz-selection { background: #A6D9F7; color: white; }
+*::selection { background: #A6D9F7; color: white; }
+
