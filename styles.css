@@ -3,7 +3,7 @@ Light Shades: #312F2F;
 Light Accent: #84DCCF;
 Main Brand Color: #A6D9F7;
 Dark Accent: #BCCCE0;
-Dark Shades: #BF98A0;
+Dark Shades: #B76E79;
 */
 
 /* Box model + base */
@@ -15,7 +15,7 @@ html, body {
     margin: 0;
     padding: 0;
     background: #312F2F;
-    color: #BF98A0;
+    color:  #B76E79;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.45;
 }
@@ -59,7 +59,7 @@ header h1 {
 .name {
     display: inline-block;
     vertical-align: middle;
-    color: #BF98A0;
+    color: #B76E79;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     font-size: 28px; /* px as requested */
     margin: 0 0 6px 0;
@@ -110,11 +110,10 @@ section#Profile {
 #skills, #projects {
     flex: 1;
     background: white;
+    color: #B76E79;
     padding: 16px;
     border-radius: 8px;
 }
-
-
 
 #skills ol, #projects ul {
     margin: 0;
@@ -125,7 +124,15 @@ section h2, article h4 {
     margin-top: 0;
 }
 
-/* Footer */
+#interests {
+    background: white;
+    padding: 16px;
+}
+
+#contact {
+    background: white;
+    padding: 16px;
+}
 footer {
     background: #BCCCE0;
     color: #312F2F;
