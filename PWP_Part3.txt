@@ -1,0 +1,112 @@
+Personal Website Project 
+Part III
+Flexbox & Forms
+Flexbox
+An Intro to Flexbox, what is Flex(box)?
+Flexbox, short for Flexible Box Layout, is a CSS layout module designed to make it easier to align and distribute space among items in a container. It allows for more dynamic, responsive layouts, where elements can automatically adjust their size and position based on the available space.
+Key features of Flexbox include:
+* Horizontal and Vertical Alignment: Flexbox makes it easy to center items both horizontally and vertically.
+* Responsive Layouts: Items can grow, shrink, or wrap to fit different screen sizes.
+* Efficient Spacing: Properties like justify-content and align-items help control space between and around items.
+* Flexible Item Sizing: The flex-grow, flex-shrink, and flex-basis properties let items adjust size based on their container.
+Flexbox is especially useful for creating complex layouts without relying on float or positioning, making it an ideal choice for modern, responsive web design.
+Review the online documentation for Flexbox via these two links:
+CSS Flexbox (Flexible Box)
+Basic concepts of flexbox - CSS: Cascading Style Sheets | MDN
+
+
+Flexbox Instructions
+We will be reconfiguring our 3-column layout to use Flexbox styling.
+1. Comment out your current rulesets for your classes assigned to the row and column in your style(s).css file. Use CTRL+/ to comment out blocks of code. Highlight the entire ruleset with your mouse or keyboard, then hit CTRL+/
+
+2. Assign a class of container to your <tag>s that contain class="row" to ALSO include a new class called “container”. 
+3. Assign each <tag> belonging to class="column" a new additional class="box".
+4. In your .css file, add two new rulesets to apply to .container and .box
+a. .container needs a background-color & padding
+b. .box needs a background-color, color, padding, and margin. 
+c. Experiment with colors, padding, and margin possibilities to find your aesthetic.
+5. To enable flexbox, add display: flex to .container.
+6. Add the justify-content property to .container and experiment with different values.
+a. justify-content: flex-start; (default)
+b. justify-content: center;
+c. justify-content: space-between;
+d. justify-content: space-around;
+7. Observe how the different values affect the spacing between items in the container. 
+8. Add height: 300px to .container to create more space within it. 
+9. Use the align-items property to align items vertically:
+a. align-items: flex-start;
+b. align-items: center;
+c. align-items: flex-end;
+10. Add flex-grow to one of the .box elements to make it expand
+a. Ex. flex-grow: 1; on your 2nd box <tag> to make Box 2 grow. 
+b. Try using style: flex-grow inside your html <tag>.
+11. Try adding flex-grow to all .box elements and set different values 
+a. Ex. flex-grow: 2; on Box 1.
+12. Using what you've learned, align the boxes in the center of the container with even spacing.
+13. Add a fourth box (of your topic of choice) and experiment with different flex-grow values to adjust their sizes.
+14. Bonus Point: Apply flex-direction: column; to see how Flexbox can create vertical layouts as well.
+a.  Do this in a page that is not your home index.html page. 
+
+
+Forms
+In your Contact Me page, add a form. HTML Forms
+The form should include the following fields:
+* Name (text input)
+* Email (email input)
+* Message (textarea for a longer message)
+* Submit Button to send the form.
+* Add a phone number field with a pattern to validate the format (e.g., XXX-XXX-XXXX). HTML input type="tel"
+* HTML button tag W3Schools documentation
+* Add a radio button selection to select either Question or Comment or Suggestion. HTML Form Elements
+* Make sure only one radio button can be selected at once by assigning all three the same name.
+Example starter Code:
+<form> 
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+Form Validation
+* Make the Name and Email fields required. HTML Input Attributes
+* Ensure that the Email field is validated to check for a proper email format.
+* Set a minlength of 10 characters for the Message field to encourage detailed input.
+Styling:
+* Style the form to match the rest of the webpage.
+* Add hover styles for ALL buttons, links, and images across your website.
+Example code for the hover styling on your buttons, links, and images. 
+
+* Add focus styles for inputs and buttons.
+Example code for the focus styling on your input fields for the form. 
+
+* Use padding, borders, and colors to make the form visually appealing and consistent with the page.
+* Use CSS grid or flexbox to align the form fields in a structured, user-friendly way.
+Final Expectations
+* Use Flexbox properties like justify-content, align-items, and flex-grow.
+* Arrange elements horizontally and vertically within a container.
+* Apply Flexbox knowledge to create flexible, responsive layouts.
+* Style error messages for invalid fields.
+* If you do not have the NavBar set up on each of your pages, do that.
+o Your active page must be highlighted to indicate which page you’re on.
+* Make sure each page is linked to your stylesheet and that there is a consistent styling across every page on your website.
+* The 3-4 columns need to be alternating in coloring. Eg. Black-white-black-white. 
+o You may need to create an in-line styling for the CSS rule for this in the .html file. 
+* Do some research and find out how to make your site mobile compatible. This is a requirement. 
+
+Student Example:
+Bianca's Introduction
+Karan Modi
+Rahul's Website
+Marcus Prado
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,6 @@ Dark Accent: #BCCCE0;
 Dark Shades: #B76E79;
 */
 
-/* Box model + base */
 * {
     box-sizing: border-box;
 }
@@ -20,7 +19,12 @@ html, body {
     line-height: 1.45;
 }
 
-/* Top-row (profile) */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .top-row {
     display: flex;
     align-items: center;
@@ -31,9 +35,10 @@ html, body {
     background: transparent;
 }
 
-.profile-info { margin-left: 4px; }
+.profile-info { 
+    margin-left: 4px; 
+}
 
-/* Page header and profile */
 header {
     background: linear-gradient(#A6D9F7, #BCCCE0);
     color: #312F2F;
@@ -70,7 +75,6 @@ header h1 {
     color: #BCCCE0;
 }
 
-/* Navigation */
 .navbar {
     list-style-type: none;
     margin: 12px 0;
@@ -78,12 +82,14 @@ header h1 {
     display: flex;
     gap: 12px;
 }
+
 .navbar a {
     text-decoration: none;
     color: #312F2F;
     padding: 8px 10px;
     border-radius: 6px;
-    transition: background 160ms ease, color 160ms ease;
+    display: inline-block;
+    transition: background-color 160ms ease, color 160ms ease;
 }
 
 .navbar a:hover {
@@ -91,33 +97,128 @@ header h1 {
     color: #312F2F;
 }
 
-/* Main 3-column layout */
-section#Profile {
+.container {
     display: flex;
     gap: 18px;
     padding: 20px;
     max-width: 1100px;
-    margin: 18px auto;
+    margin: 36px auto 18px; /* push container lower so it doesn't cover profile */
+    min-height: 300px; /* allow growth on small viewports */
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
 }
 
-#bio {
-    flex: 2;
-    background: #84DCCF;
-    padding: 16px;
-    border-radius: 8px;
-}
-
-#skills, #projects {
+.box {
     flex: 1;
-    background: white;
-    color: #B76E79;
     padding: 16px;
+    margin: 8px;
     border-radius: 8px;
+    color: #ffffff;
+    background-color: #000000;
+    min-width: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-#skills ol, #projects ul {
-    margin: 0;
-    padding-left: 18px;
+.container .box:nth-child(2) { 
+    flex-grow: 2; 
+}
+
+.container .box:nth-child(even) {
+    background-color: #ffffff;
+    color: #B76E79;
+}
+
+@media (max-width: 900px) {
+    .container { 
+        flex-direction: 
+        column; 
+        height: 
+        auto; 
+    }
+}
+
+.navbar a.active {
+    background: #84DCCF;
+    color: #ffffff;
+}
+
+.contact-wrap { 
+    display: flex; 
+    gap: 18px; 
+    align-items: flex-start; 
+    flex-wrap:wrap; 
+}
+
+/* Bonus */
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.contact-form { 
+    flex: 1 1 420px; 
+    display:flex; 
+    flex-direction:column; 
+    gap:8px; 
+    background: black; 
+    padding:16px; 
+    border-radius:8px; 
+    color: #B76E79;
+}
+.contact-info { 
+    background: white; 
+    color:#B76E79; 
+    padding:12px; 
+    border-radius:8px; 
+    max-width:auto; 
+    margin:24px auto 0; 
+}
+.contact-form label { 
+    font-weight:600; 
+}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"], .contact-form textarea {
+    padding:8px; 
+    border-radius:6px; 
+    border:1px solid #84DCCF; 
+    font-size:14px;
+    background: white; 
+    color:#312F2F;
+}
+.contact-form textarea { 
+    min-height: 100px; 
+    resize: vertical; 
+}
+
+/* Error message styling for invalid inputs */
+.error { display: none; color: #B76E79; font-size: 13px; margin-top: 4px; }
+input:invalid + .error, textarea:invalid + .error { display: block; }
+input:focus:invalid + .error, textarea:focus:invalid + .error { display: block; }
+.contact-form .btn { 
+    background:#312F2F; 
+    color:#A6D9F7; 
+    padding:10px 12px; 
+    border:none; 
+    border-radius:6px; 
+    cursor:pointer; 
+}
+
+.contact-form .btn:hover { 
+    background:#84DCCF; 
+    color:#312F2F;
+}
+
+button:hover, .navbar a:hover, img:hover { 
+    opacity: 0.95; 
+    transform: translateY(-1px); 
+    transition: all 160ms ease; 
+}
+
+input:focus, textarea:focus, button:focus, a:focus { 
+    outline: 3px solid #84DCCF; 
+    outline-offset: 2px; 
 }
 
 section h2, article h4 {
@@ -127,25 +228,33 @@ section h2, article h4 {
 #interests {
     background: white;
     padding: 16px;
+    margin: auto;
+    border-radius: 20px;
 }
 
 #contact {
     background: white;
-    padding: 16px;
+    padding: 25px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 25px;
 }
+
 footer {
     background: #BCCCE0;
     color: #312F2F;
     padding: 16px 20px;
     text-align: center;
+    margin-top: auto;
+    width: 100%;
 }
 
 footer a { 
-color: #007acc;
+    color: #007acc;
     text-decoration: none;
- }
+}
 
-/* Responsive behavior */
 @media (max-width: 900px) {
     section#Profile { flex-direction: column; padding: 12px; }
     .profile-pic { width: 100px; height: 100px; }
@@ -156,7 +265,6 @@ color: #007acc;
     .navbar { flex-direction: column; gap: 6px; padding-left: 20px; }
 }
 
-/* Accessibility: avoid comic sans, set readable defaults */
 *::-moz-selection { background: #A6D9F7; color: white; }
 *::selection { background: #A6D9F7; color: white; }
 

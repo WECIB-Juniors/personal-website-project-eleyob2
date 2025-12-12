@@ -1,0 +1,4 @@
+Patch notes:
+- interests.html: add class="container vertical" to <section id="interests">
+- styles.css: add .vertical rule and .error styles and invalid selectors
+- contact.html: insert <span class="error"> messages after inputs and textarea
